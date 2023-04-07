@@ -99,6 +99,16 @@ ul {
   font-size: 80px;
 }
 
+.temp-today .active {
+  color: rgb(57, 57, 57);
+  cursor: default;
+  text-decoration: none;
+}
+
+.temp-today .active:hover {
+  text-decoration: none;
+}
+
 .temperature {
   position: relative;
   top: 10px;
