@@ -1,11 +1,6 @@
-let apiKey = "a5e9d6baaddo9b42fdt0da22d43443d0";
-let units = "metric";
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=London&key=${apiKey}&units=${units}`;
-
 function formatDate(timestamp) {
   //calculate date and return it
   let date = new Date(timestamp);
-  console.log(timestamp);
   let hours = date.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
@@ -42,6 +37,25 @@ function showTemperature(response) {
   windElement.innerHTML = Math.round(response.data.wind.speed);
   let dateElement = document.querySelector("#date");
   dateElement.innerHTML = formatDate(response.data.time * 1000);
+  let iconElement = document.querySelector("#weather-icon");
+  iconElement.setAttribute(
+    "src",
+    `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
+  );
 }
 
-axios.get(apiUrl).then(showTemperature);
+function search(city) {
+  let apiKey = "a5e9d6baaddo9b42fdt0da22d43443d0";
+  let units = "metric";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(showTemperature);
+}
+
+function handleSubmit(Event) {
+  Event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
