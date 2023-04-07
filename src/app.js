@@ -57,5 +57,54 @@ function handleSubmit(Event) {
   search(cityInputElement.value);
 }
 
+function getCurrentLocation(Event) {
+  Event.preventDefault();
+  navigator.geolocation.getCurrentPosition(searchLocation);
+}
+
+function searchLocation(position) {
+  let apiKey = "a5e9d6baaddo9b42fdt0da22d43443d0";
+  let units = "metric";
+  let lat = position.coordinates.latitude;
+  let lon = position.coordinates.longitude;
+  let apiUrl = `https://api.shecodes.io/weather/v1/ current?lon=${lon}&lat=${lat}&key=${apiKey}&units=${units}`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(showTemperature);
+}
+
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+let currentLocationButton = document.querySelector("#location-button");
+currentLocationButton.addEventListener("click", getCurrentLocation);
+
+// function search(Event) {
+//   Event.preventDefault();
+//   let searchInput = document.querySelector("#city-input");
+//   let h1 = document.querySelector("h1");
+//   let inputLower = searchInput.value.toLowerCase().trim();
+//   h1.innerHTML = inputLower.charAt(0).toUpperCase() + inputLower.slice(1);
+
+//   let apiKey = "a5e9d6baaddo9b42fdt0da22d43443d0";
+//   let units = "metric";
+//   let currentCity = searchInput.value;
+
+//   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${currentCity}&key=${apiKey}&units=${units}`;
+
+//   axios.get(apiUrl).then(showTemperature);
+// }
+
+// let currentCityButton = document.getElementById("#location-button");
+// currentCityButton.onclick = function () {
+//   navigator.geolocation.getCurrentPosition(currentLocation);
+// };
+
+// function currentLocation(position) {
+//   let lat = position.coordinates.latitude;
+//   let lon = position.coordinates.longitude;
+//   let apiKey = "a5e9d6baaddo9b42fdt0da22d43443d0";
+//   let units = "metric";
+//   let apiUrl = `https://api.shecodes.io/weather/v1/ current?lon=${lon}&lat=${lat}&key=${apiKey}&units=${units}`;
+
+//   axios.get(apiUrl).then(showTemperature);
+// }
