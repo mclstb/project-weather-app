@@ -7,6 +7,8 @@
   background-size: 100% 100%;
   overflow: hidden;
   border-radius: 15px;
+  max-width: 850px;
+  margin: 20px auto;
 }
 
 .form-container {
@@ -72,9 +74,30 @@ h1 {
 
 ul {
   list-style: none;
-  margin: 0px;
-  padding: 0px;
+}
+
+.date {
+  margin-top: 0px;
+  font-size: 24px;
+}
+
+.weather-today {
   font-size: 22px;
+  position: relative;
+  top: 10px;
+  line-height: 40px;
+}
+
+.humidity {
+  line-height: 40px;
+  font-size: 22px;
+  position: relative;
+  top: 5px;
+}
+
+.wind {
+  font-size: 22px;
+  line-height: 40px;
 }
 
 .temp-today {
@@ -83,10 +106,15 @@ ul {
   font-size: 80px;
 }
 
+.temperature {
+  position: relative;
+  top: 10px;
+}
+
 .degrees {
   font-size: 15px;
   position: relative;
-  bottom: 48px;
+  bottom: 38px;
 }
 
 .forecast {
@@ -105,6 +133,7 @@ ul {
   position: relative;
   width: 750px;
   display: flex;
+  top: 20px;
 }
 
 .day {
