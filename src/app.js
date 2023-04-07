@@ -15,6 +15,17 @@ function showTemperature(response) {
   humidityElement.innerHTML = response.data.temperature.humidity;
   let windElement = document.querySelector("#wind");
   windElement.innerHTML = Math.round(response.data.wind.speed);
+  let dateElement = document.querySelector("#date");
+  dateElement.innerHTML = formatDate(response.time * 1000).value;
+}
+
+function formatDate(timestamp) {
+  //calculate date and return it
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  let day = date.getDay();
+  return `${day} ${hours}: ${minutes}`;
 }
 
 axios.get(apiUrl).then(showTemperature);
