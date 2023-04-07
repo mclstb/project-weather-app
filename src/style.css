@@ -41,12 +41,16 @@ button {
   transition: all 200ms ease;
 }
 
-.search:hover {
+.search-button:hover {
   background-color: #d8928c;
 }
 
 .location-button {
   float: right;
+}
+
+.location-button:hover {
+  background-color: #d8928c;
 }
 
 .body {
