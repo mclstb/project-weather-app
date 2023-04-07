@@ -1,0 +1,132 @@
+.container {
+  padding-top: 10px;
+  padding-bottom: 25px;
+  font-family: "Poppins", sans-serif;
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/075/640/original/background.jpg?1680863236://s3.amazonaws.com/shecodesio-production/uploads/files/000/075/639/original/background.jpg?1680863179://s3.amazonaws.com/shecodesio-production/uploads/files/000/075/638/original/background.jpg?1680862915");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.form-container {
+  max-width: 750px;
+  padding-top: 10px;
+  margin: auto;
+}
+
+.city-input {
+  border: none;
+  background-color: rgba(255, 255, 255, 0.4);
+  width: 100%;
+  display: block;
+  margin: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 15px;
+}
+
+button {
+  border: none;
+  background-color: rgba(255, 255, 255, 0.4);
+  width: 100%;
+  display: block;
+  margin: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 15px;
+  transition: all 200ms ease;
+}
+
+.search:hover {
+  background-color: #d8928c;
+}
+
+.location-button {
+  float: right;
+}
+
+.body {
+  max-width: 750px;
+  margin: 10px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 15px;
+}
+
+h1 {
+  font-size: 42px;
+  font-weight: 800;
+  position: relative;
+  left: 20px;
+}
+
+.first-row {
+  position: relative;
+  right: 10px;
+}
+
+.weather-info {
+  text-align: left;
+}
+
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  font-size: 22px;
+}
+
+.temp-today {
+  position: relative;
+  text-align: center;
+  font-size: 80px;
+}
+
+.degrees {
+  font-size: 15px;
+  position: relative;
+  bottom: 48px;
+}
+
+.forecast {
+  position: relative;
+  max-width: 750px;
+  margin: 10px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 15px;
+  text-align: center;
+}
+
+.day-forecast {
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+  width: 750px;
+  display: flex;
+}
+
+.day {
+  width: 120px;
+}
+
+h3 {
+  font-size: 26px;
+}
+
+hr {
+  border-color: rgb(102, 101, 101);
+}
+
+.forecast-maxmin {
+  font-size: 20px;
+  position: relative;
+  top: 10px;
+}
+
+.footer {
+  font-size: 10px;
+  text-align: center;
+  color: white;
+}

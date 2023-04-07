@@ -11,10 +11,17 @@
       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <script
       src="https://kit.fontawesome.com/ad3da6d66d.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <title>Project: Weather App</title>
   </head>
   <body>
@@ -31,14 +38,18 @@
               />
             </div>
             <div class="col-2">
-              <button type="submit" class="search-button" id="search-button">
+              <button
+                type="submit"
+                class="rounded search-button"
+                id="search-button"
+              >
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
             </div>
             <div class="col-2">
               <button
                 type="submit"
-                class="location-button"
+                class="rounded location-button"
                 id="location-button"
               >
                 <i
@@ -53,115 +64,120 @@
       <div class="body">
         <h1 class="city" id="city">Barcelona</h1>
 
-        <div class="row">
+        <div class="row first-row">
           <div class="col-sm-5 weather-info">
             <ul>
-              <li><span id="date">Friday, April 7</span></li>
-              <li><span id="weather-today">Sunny</span></li>
-              <li><span id="humidity">Humidity%</span></li>
-              <li><span id="wind">Wind mph</span></li>
+              <li><span class="date" id="date">Friday, April 7</span></li>
+              <li>
+                <span class="weather-today" id="weather-today">Sunny</span>
+              </li>
+              <li><span class="humidity" id="humidity">Humidity%</span></li>
+              <li><span class="wind" id="wind">Wind mph</span></li>
             </ul>
           </div>
-        </div>
-        <div class="col-sm-5 weather-today">
-          <img
-            src="src/images/sunny.png"
-            alt="weather icon"
-            id="weather-icon"
-            width="85"
-          />
-          <h2 class="temperature">
-            <span class="current-temp" id="current-temp">25</span>
-            <span class="degrees"
-              ><a href="" id="celsius-link">ºC</a> |
-              <a href="" id="fahrenheit-link">ºF</a>
-            </span>
-          </h2>
+
+          <div class="col-sm-7 temp-today">
+            <p>
+              <img
+                src="src/images/sunny.png"
+                alt="weather icon"
+                id="weather-icon"
+                width="120"
+              />
+              <span class="temperature" id="current-temp">25</span
+              ><span class="degrees"
+                ><a href="" id="celsius-link">ºC</a> |
+                <a href="" id="fahrenheit-link">ºF</a>
+              </span>
+            </p>
+          </div>
         </div>
       </div>
 
       <div class="forecast">
-        <div class="row day-forecast">
-          <div class="day">
-            <hr />
-            <h3>Mon</h3>
-            <img
-              src="src/images/verycloudy.png"
-              alt="very cloudy"
-              width="50"
-              height="50"
-            />
-            <p class="forecast-maxmin">20° | 13°</p>
-          </div>
+        <div class="row">
+          <div class="day-forecast">
+            <div class="day">
+              <hr />
+              <h3>Mon</h3>
+              <img
+                src="src/images/verycloudy.png"
+                alt="very cloudy"
+                width="50"
+                height="50"
+              />
+              <p class="forecast-maxmin">20° | 13°</p>
+            </div>
 
-          <div class="day">
-            <hr />
-            <h3>Tue</h3>
-            <img
-              src="src/images/verycloudy.png"
-              alt="very cloudy"
-              width="50"
-              height="50"
-            />
-            <p class="forecast-maxmin">20° | 13°</p>
-          </div>
+            <div class="day">
+              <hr />
+              <h3>Tue</h3>
+              <img
+                src="src/images/verycloudy.png"
+                alt="very cloudy"
+                width="50"
+                height="50"
+              />
+              <p class="forecast-maxmin">20° | 13°</p>
+            </div>
 
-          <div class="day">
-            <hr />
-            <h3>Wed</h3>
-            <img
-              src="src/images/verycloudy.png"
-              alt="very cloudy"
-              width="50"
-              height="50"
-            />
-            <p class="forecast-maxmin">20° | 13°</p>
-          </div>
+            <div class="day">
+              <hr />
+              <h3>Wed</h3>
+              <img
+                src="src/images/verycloudy.png"
+                alt="very cloudy"
+                width="50"
+                height="50"
+              />
+              <p class="forecast-maxmin">20° | 13°</p>
+            </div>
 
-          <div class="day">
-            <hr />
-            <h3>Thu</h3>
-            <img
-              src="src/images/verycloudy.png"
-              alt="very cloudy"
-              width="50"
-              height="50"
-            />
-            <p class="forecast-maxmin">20° | 13°</p>
-          </div>
+            <div class="day">
+              <hr />
+              <h3>Thu</h3>
+              <img
+                src="src/images/verycloudy.png"
+                alt="very cloudy"
+                width="50"
+                height="50"
+              />
+              <p class="forecast-maxmin">20° | 13°</p>
+            </div>
 
-          <div class="day">
-            <hr />
-            <h3>Fri</h3>
-            <img
-              src="src/images/verycloudy.png"
-              alt="very cloudy"
-              width="50"
-              height="50"
-            />
-            <p class="forecast-maxmin">20° | 13°</p>
-          </div>
+            <div class="day">
+              <hr />
+              <h3>Fri</h3>
+              <img
+                src="src/images/verycloudy.png"
+                alt="very cloudy"
+                width="50"
+                height="50"
+              />
+              <p class="forecast-maxmin">20° | 13°</p>
+            </div>
 
-          <div class="day">
-            <hr />
-            <h3>Sat</h3>
-            <img
-              src="src/images/verycloudy.png"
-              alt="very cloudy"
-              width="50"
-              height="50"
-            />
-            <p class="forecast-maxmin">20° | 13°</p>
+            <div class="day">
+              <hr />
+              <h3>Sat</h3>
+              <img
+                src="src/images/verycloudy.png"
+                alt="very cloudy"
+                width="50"
+                height="50"
+              />
+              <p class="forecast-maxmin">20° | 13°</p>
+            </div>
           </div>
         </div>
       </div>
 
-      <small
-        ><a href="https://github.com/mclstb/project-weather-app" target="_blank"
+      <p class="footer">
+        <a href="https://github.com/mclstb/project-weather-app" target="_blank"
           >Open-source code</a
         >
-        by Celeste</small
-      >
+        by Celeste
+      </p>
     </div>
 
     <script src="src/app.js"></script>
