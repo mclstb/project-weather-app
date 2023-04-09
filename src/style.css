@@ -1,7 +1,7 @@
 .container {
   padding-top: 10px;
   padding-bottom: 25px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
   background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/075/640/original/background.jpg?1680863236://s3.amazonaws.com/shecodesio-production/uploads/files/000/075/639/original/background.jpg?1680863179://s3.amazonaws.com/shecodesio-production/uploads/files/000/075/638/original/background.jpg?1680862915");
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -61,12 +61,12 @@ button {
   border-radius: 15px;
 }
 
-h1 {
+.city {
   font-size: 42px;
-  font-weight: 800;
   position: relative;
   left: 20px;
   margin-bottom: 0px;
+  font-weight: bold;
 }
 
 .date {
@@ -97,6 +97,11 @@ ul {
   text-transform: capitalize;
 }
 
+strong {
+  font-weight: lighter;
+  color: #ca8882da;
+}
+
 .temp-today {
   position: relative;
   text-align: center;
@@ -116,6 +121,7 @@ ul {
 .temperature {
   position: relative;
   top: 10px;
+  font-weight: bold;
 }
 
 .degrees {
@@ -156,7 +162,7 @@ hr {
 }
 
 .min-temp {
-  opacity: 0.6;
+  opacity: 0.8;
 }
 
 .footer {
