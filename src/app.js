@@ -22,6 +22,37 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
+//function that will display the forecast
+
+function showForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+          <div class="col-2 day-forecast">
+            <div class="day">
+              <h3>${day}</h3>
+              <img
+                src="src/images/verycloudy.png"
+                alt="very cloudy"
+                width="50"
+                height="50"
+              />
+              <p class="forecast-maxmin">
+                20° |<span class="min-temp"> 13°</span>
+              </p>
+            </div>
+          </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 //change weather info according to city searched
 
 function showTemperature(response) {
@@ -111,3 +142,4 @@ let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", showCelsiusTemp);
 
 search("London");
+showForecast();

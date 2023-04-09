@@ -36,6 +36,7 @@
                 class="rounded city-input"
                 id="city-input"
                 autocomplete="off"
+                autofocus="off"
               />
             </div>
             <div class="col-2">
@@ -94,9 +95,9 @@
         </div>
       </div>
 
-      <div class="forecast">
+      <div class="forecast" id="forecast">
         <div class="row">
-          <div class="day-forecast">
+          <div class="col-2 day-forecast">
             <div class="day">
               <h3>Mon</h3>
               <img
@@ -105,62 +106,9 @@
                 width="50"
                 height="50"
               />
-              <p class="forecast-maxmin">20° | 13°</p>
-            </div>
-
-            <div class="day">
-              <h3>Tue</h3>
-              <img
-                src="src/images/verycloudy.png"
-                alt="very cloudy"
-                width="50"
-                height="50"
-              />
-              <p class="forecast-maxmin">20° | 13°</p>
-            </div>
-
-            <div class="day">
-              <h3>Wed</h3>
-              <img
-                src="src/images/verycloudy.png"
-                alt="very cloudy"
-                width="50"
-                height="50"
-              />
-              <p class="forecast-maxmin">20° | 13°</p>
-            </div>
-
-            <div class="day">
-              <h3>Thu</h3>
-              <img
-                src="src/images/verycloudy.png"
-                alt="very cloudy"
-                width="50"
-                height="50"
-              />
-              <p class="forecast-maxmin">20° | 13°</p>
-            </div>
-
-            <div class="day">
-              <h3>Fri</h3>
-              <img
-                src="src/images/verycloudy.png"
-                alt="very cloudy"
-                width="50"
-                height="50"
-              />
-              <p class="forecast-maxmin">20° | 13°</p>
-            </div>
-
-            <div class="day">
-              <h3>Sat</h3>
-              <img
-                src="src/images/verycloudy.png"
-                alt="very cloudy"
-                width="50"
-                height="50"
-              />
-              <p class="forecast-maxmin">20° | 13°</p>
+              <p class="forecast-maxmin">
+                20° |<span class="min-temp"> 13°</span>
+              </p>
             </div>
           </div>
         </div>
