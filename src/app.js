@@ -167,5 +167,5 @@ fahrenheitLink.addEventListener("click", showFahrenheitTemp);
 let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", showCelsiusTemp);
 
-search("London");
+search("Barcelona");
 showForecast();

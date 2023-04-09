@@ -8,7 +8,7 @@
   overflow: hidden;
   border-radius: 15px;
   max-width: 850px;
-  margin: 20px auto;
+  margin: 10px auto;
   color: rgb(57, 57, 57);
 }
 
@@ -42,7 +42,7 @@ button {
 }
 
 .search-button:hover {
-  background-color: #d8928c;
+  background-color: #d7b1ad;
 }
 
 .location-button {
@@ -50,7 +50,7 @@ button {
 }
 
 .location-button:hover {
-  background-color: #d8928c;
+  background-color: #d7b1ad;
 }
 
 .body {
@@ -162,7 +162,7 @@ hr {
 }
 
 .min-temp {
-  opacity: 0.8;
+  color: #d7b1ad;
 }
 
 .footer {
